@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>create menu</title>
+</head>
+<body>
+
+<form th:object="${menu}" th:action="@{/menu/new}" method="post" enctype="multipart/form-data">
+    <div class="form-group has-feedback">
+        <div class="form-group">
+            <div class="col-sm-30">
+
+                <label class="col-sm-20 control-label">name </label>
+                <input class="form-control" th:field="*{name}" size="60" maxlength="80" />
+
+                <label class="col-sm-20 control-label">price </label>
+                <input class="form-control" th:field="*{price}" size="60" maxlength="80" />
+
+                <label>Photos: </label>
+                <input type="file" name="image" accept="image/png, image/jpeg" />
+
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button
+                    class="btn btn-default" type="submit" th:text="submit">
+            </button>
+        </div>
+    </div>
+</form>
+</body>
+</html>

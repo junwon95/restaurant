@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <table class="table table-striped" th:object="${image}">
+        <tr>
+            <img  th:src="@{'data:image/jpeg;base64,'+${image.generateBase64Image()}}" />
+
+        </tr>
+    </table>
+</head>
+<body>
+
+</body>
+</html>
