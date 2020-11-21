@@ -13,6 +13,9 @@ public class MenuController {
     }
     @GetMapping("/menu")
     public String getMenu1(){
+        Menu menu = menuRepository.findMenuById(1);
+        int price = menu.getPrice();
+        return Integer.toString(price);
     }
 
 
