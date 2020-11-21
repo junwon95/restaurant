@@ -1,16 +1,14 @@
 package com.example.restaurant;
 
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+import java.util.Date;
+
+@RestController
 public class MainPageController {
-    @GetMapping("/")
-    public String welcome() {
-        return "welcome";
-    }
     @GetMapping("/api/hello")
     public String hello(){
-        return "안녕";
+        return "핫스왑";
     }
 }

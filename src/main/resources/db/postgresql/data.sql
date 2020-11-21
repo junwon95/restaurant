@@ -1,1 +1,2 @@
 INSERT INTO orders VALUES (1, '2020-11-20', 3000, true, false, 1) ON CONFLICT (id) DO NOTHING;
+INSERT INTO menus VALUES (1, 'hotdog', 3000, null) ON CONFLICT (id) DO NOTHING;
