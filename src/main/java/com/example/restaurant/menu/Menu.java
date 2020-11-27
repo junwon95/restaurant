@@ -21,6 +21,12 @@ public class Menu extends BaseEntity {
     @Column(name = "price")
     private Integer price;
 
+    @Column(name = "stock")
+    private Integer stock;
+
+    @Column(name = "stock_price")
+    private Integer stockPrice;
+
     @Lob
     @Type(type="org.hibernate.type.BinaryType")
     @Column(name = "image_file")
